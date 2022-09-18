@@ -21,7 +21,8 @@ namespace NumericPrograms
             Console.WriteLine("03. Factorial Number Using Recursion");
             Console.WriteLine("04. Odd Or Even");
             Console.WriteLine("05. Arithmetic Ops");
-            Console.WriteLine("06. HFC And LCM  --Pending");
+            Console.WriteLine("06. Leap Year");
+            Console.WriteLine("07. HFC And LCM  --Pending");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Enter Choice :: ");
             return Convert.ToInt32(Console.ReadLine());
@@ -42,7 +43,7 @@ namespace NumericPrograms
                     userInput = CommonCode.readInput();
                     if (CommonCode.validateNumber(userInput))
                     {
-                        AddDigitsUsingRecursion obj1 = new AddDigitsUsingRecursion();
+                        AddDigits obj1 = new AddDigits();
                         userOutput = obj1.addDigits(userInput);
                         Console.WriteLine($"\ntotal of digits :: {userOutput}");
                     }
@@ -77,6 +78,11 @@ namespace NumericPrograms
                     Console.WriteLine($"Substraction ::{obj5.Sub(userInput, userInput2)}");
                     Console.WriteLine($"Division ::{obj5.Div(userInput, userInput2)}");
                     Console.WriteLine($"Multiplication ::{obj5.Mul(userInput, userInput2)}");
+                    break;
+                case 6: 
+                    userInput = CommonCode.readInput();
+                    LeapYear obj6 = new LeapYear();
+                    Console.WriteLine($"Year {userInput} :: {obj6.checkLeapYear(userInput)}");
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
