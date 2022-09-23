@@ -27,6 +27,7 @@ namespace NumericPrograms
             Console.WriteLine("09. Addition of N Number");
             Console.WriteLine("10. Swapping of Two Numbers");
             Console.WriteLine("11. Reverse Number");
+            Console.WriteLine("12. Palindrome Number");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Enter Choice :: ");
             return Convert.ToInt32(Console.ReadLine());
@@ -129,6 +130,12 @@ namespace NumericPrograms
                     ReverseNumber obj11 = new ReverseNumber();
                     userInput = CommonCode.readInput();
                     Console.WriteLine($"Reverse Number :: {obj11.getReverseNumber(userInput)}");
+                    break;
+                case 12:
+                    PalindromeNumber obj12 = new PalindromeNumber();
+                    userInput = CommonCode.readInput();
+                    string msg = obj12.isPalindrome(userInput) ? "" : "Not ";
+                    Console.WriteLine($"Number {userInput} is {msg}Palindrome");
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
