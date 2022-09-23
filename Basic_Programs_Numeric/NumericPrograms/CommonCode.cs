@@ -26,6 +26,7 @@ namespace NumericPrograms
             Console.WriteLine("08. Decimal To Binary");
             Console.WriteLine("09. Addition of N Number");
             Console.WriteLine("10. Swapping of Two Numbers");
+            Console.WriteLine("11. Reverse Number");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Enter Choice :: ");
             return Convert.ToInt32(Console.ReadLine());
@@ -123,6 +124,11 @@ namespace NumericPrograms
                     obj10.usingBitwise(ref userInput, ref userInput2);
 
                     Console.WriteLine($"After Swap : {userInput} {userInput2}");
+                    break;
+                case 11:
+                    ReverseNumber obj11 = new ReverseNumber();
+                    userInput = CommonCode.readInput();
+                    Console.WriteLine($"Reverse Number :: {obj11.getReverseNumber(userInput)}");
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
