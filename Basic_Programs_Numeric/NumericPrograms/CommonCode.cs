@@ -24,6 +24,7 @@ namespace NumericPrograms
             Console.WriteLine("06. Leap Year");
             Console.WriteLine("07. HFC And LCM");
             Console.WriteLine("08. Decimal To Binary");
+            Console.WriteLine("09. Addition of N Number");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Enter Choice :: ");
             return Convert.ToInt32(Console.ReadLine());
@@ -98,6 +99,11 @@ namespace NumericPrograms
                     DecimalToBinary obj8 = new DecimalToBinary();
                     userInput = CommonCode.readInput();
                     Console.WriteLine($"Binary for {userInput} is {obj8.getBinary(userInput)}");
+                    break;
+                    case 9:
+                    AddNNumber obj9 = new AddNNumber();
+                    userInput = CommonCode.readInput();   
+                    Console.WriteLine($"Addition for {userInput} is {obj9.getAdditionOfNum(userInput)}");
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
