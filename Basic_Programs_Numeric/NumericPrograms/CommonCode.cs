@@ -23,6 +23,7 @@ namespace NumericPrograms
             Console.WriteLine("05. Arithmetic Ops");
             Console.WriteLine("06. Leap Year");
             Console.WriteLine("07. HFC And LCM");
+            Console.WriteLine("08. Decimal To Binary");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Enter Choice :: ");
             return Convert.ToInt32(Console.ReadLine());
@@ -92,6 +93,11 @@ namespace NumericPrograms
 
                     Console.WriteLine($"Using Recursion HCF ({userInput}, {userInput2}) is {obj7.getHCFUsingRecursion(userInput, userInput2)}");
                     Console.WriteLine($"Using Recursion LCM ({userInput}, {userInput2}) is {obj7.getLCMUsingRecursion(userInput, userInput2)}");
+                    break;
+                case 8:
+                    DecimalToBinary obj8 = new DecimalToBinary();
+                    userInput = CommonCode.readInput();
+                    Console.WriteLine($"Binary for {userInput} is {obj8.getBinary(userInput)}");
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
