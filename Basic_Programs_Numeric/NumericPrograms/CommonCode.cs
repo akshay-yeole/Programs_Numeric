@@ -25,6 +25,7 @@ namespace NumericPrograms
             Console.WriteLine("07. HFC And LCM");
             Console.WriteLine("08. Decimal To Binary");
             Console.WriteLine("09. Addition of N Number");
+            Console.WriteLine("10. Swapping of Two Numbers");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Enter Choice :: ");
             return Convert.ToInt32(Console.ReadLine());
@@ -104,6 +105,12 @@ namespace NumericPrograms
                     AddNNumber obj9 = new AddNNumber();
                     userInput = CommonCode.readInput();   
                     Console.WriteLine($"Addition for {userInput} is {obj9.getAdditionOfNum(userInput)}");
+                    break;
+                case 10:
+                    userInput = CommonCode.readInput();
+                    userInput2 = CommonCode.readInput();
+                    SwappingNumber obj10 = new SwappingNumber();
+                    Console.WriteLine($"Number {userInput}{userInput2} After Swapped : {obj10.getSwapedNumbers(userInput, userInput2)}");
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
