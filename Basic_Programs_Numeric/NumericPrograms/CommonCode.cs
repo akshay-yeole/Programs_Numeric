@@ -90,7 +90,7 @@ namespace NumericPrograms
                     userInput = CommonCode.readInput();
                     userInput2 = CommonCode.readInput();
                     LcmAndHcf obj7 = new LcmAndHcf();
-                    Console.WriteLine($"HCF ({userInput}, {userInput2}) is {obj7.getHCF(userInput,userInput2)}");
+                    Console.WriteLine($"HCF ({userInput}, {userInput2}) is {obj7.getHCF(userInput, userInput2)}");
                     Console.WriteLine($"LCM ({userInput}, {userInput2}) is {obj7.getLCM(userInput, userInput2)}");
 
                     Console.WriteLine($"Using Recursion HCF ({userInput}, {userInput2}) is {obj7.getHCFUsingRecursion(userInput, userInput2)}");
@@ -101,16 +101,28 @@ namespace NumericPrograms
                     userInput = CommonCode.readInput();
                     Console.WriteLine($"Binary for {userInput} is {obj8.getBinary(userInput)}");
                     break;
-                    case 9:
+                case 9:
                     AddNNumber obj9 = new AddNNumber();
-                    userInput = CommonCode.readInput();   
+                    userInput = CommonCode.readInput();
                     Console.WriteLine($"Addition for {userInput} is {obj9.getAdditionOfNum(userInput)}");
                     break;
                 case 10:
                     userInput = CommonCode.readInput();
                     userInput2 = CommonCode.readInput();
                     SwappingNumber obj10 = new SwappingNumber();
-                    Console.WriteLine($"Number {userInput}{userInput2} After Swapped : {obj10.getSwapedNumbers(userInput, userInput2)}");
+
+                    Console.WriteLine($"Before Swap : {userInput} {userInput2}");
+
+                    //Using Call By Value
+                    //Console.WriteLine($"After Swapped : {obj10.getSwapedNumbers(userInput, userInput2)}");
+
+                    //Using Call By Reference
+                    //obj10.getSwapedNumbersUsingReferenceVal(ref userInput, ref userInput2);
+
+                    //Swap by using Bitwise
+                    obj10.usingBitwise(ref userInput, ref userInput2);
+
+                    Console.WriteLine($"After Swap : {userInput} {userInput2}");
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
