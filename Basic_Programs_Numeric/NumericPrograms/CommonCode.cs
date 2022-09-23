@@ -22,7 +22,7 @@ namespace NumericPrograms
             Console.WriteLine("04. Odd Or Even");
             Console.WriteLine("05. Arithmetic Ops");
             Console.WriteLine("06. Leap Year");
-            Console.WriteLine("07. HFC And LCM  --Pending");
+            Console.WriteLine("07. HFC And LCM");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Enter Choice :: ");
             return Convert.ToInt32(Console.ReadLine());
@@ -67,8 +67,7 @@ namespace NumericPrograms
                     userInput = CommonCode.readInput();
                     OddOrEven obj4 = new OddOrEven();
                     Console.WriteLine($"Number {userInput} is :: {obj4.usingBitWiseOperator(userInput)}");
-                    //using conditional operator
-                    Console.WriteLine($"Number {userInput} is :: {obj4.usingConditionalOperator(userInput)}");
+                    Console.WriteLine($"using conditional operator Number {userInput} is :: {obj4.usingConditionalOperator(userInput)}");
                     break;
                 case 5:
                     userInput = CommonCode.readInput();
@@ -79,10 +78,20 @@ namespace NumericPrograms
                     Console.WriteLine($"Division ::{obj5.Div(userInput, userInput2)}");
                     Console.WriteLine($"Multiplication ::{obj5.Mul(userInput, userInput2)}");
                     break;
-                case 6: 
+                case 6:
                     userInput = CommonCode.readInput();
                     LeapYear obj6 = new LeapYear();
                     Console.WriteLine($"Year {userInput} :: {obj6.checkLeapYear(userInput)}");
+                    break;
+                case 7:
+                    userInput = CommonCode.readInput();
+                    userInput2 = CommonCode.readInput();
+                    LcmAndHcf obj7 = new LcmAndHcf();
+                    Console.WriteLine($"HCF ({userInput}, {userInput2}) is {obj7.getHCF(userInput,userInput2)}");
+                    Console.WriteLine($"LCM ({userInput}, {userInput2}) is {obj7.getLCM(userInput, userInput2)}");
+
+                    Console.WriteLine($"Using Recursion HCF ({userInput}, {userInput2}) is {obj7.getHCFUsingRecursion(userInput, userInput2)}");
+                    Console.WriteLine($"Using Recursion LCM ({userInput}, {userInput2}) is {obj7.getLCMUsingRecursion(userInput, userInput2)}");
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
